@@ -8,6 +8,40 @@
 </head>
 <body>
 
+    <header>
+        <h1 id="heading">library</h1>
+    </header>
+
+    <main>
+        <button id="add-btn">+ Add book</button>
+
+        <div id="add-book">
+            <form action="" id="form-add-book">
+                <h2>Add new book</h2>
+                <div id="label-and-input">
+                    <label for="title">Title:</label>
+                    <input type="text" name="title" id="title" required>
+                    <label for="author">Author:</label>
+                    <input type="text" name="author" id="author" required>
+                    <label for="numbPages">Pages:</label>
+                    <input type="number" name="number" id="num-pages" required>
+                    <div id="have-read-it">
+                        <label for="read-it">Have you read it?</label>
+                        <input type="checkbox" id="read-it" name="read-it" value="false">
+                    </div>
+                </div>
+                <input id="submit-btn" type="submit" value="Submit">
+            </form>
+        </div>
+
+        <div id="show-added-books">
+
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
 
     <script src="./script.js"></script>
 </body>
