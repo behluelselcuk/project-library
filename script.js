@@ -3,6 +3,7 @@
 // Eingabe
 const addBtn = document.querySelector('#add-btn');
 const divAddBook = document.querySelector('#add-book');
+const divBgOverlay = document.querySelector('#bg-overlay');
 const form = document.querySelector('#form-add-book');
 const inputTitle = document.querySelector('#title');
 const inputAuthor = document.querySelector('#author');
@@ -113,8 +114,9 @@ function addBookToDOM() {
 }
 
 function openDivAddBook() {
-    if (!divAddBook.classList.contains('open')) {
+    if (!divAddBook.classList.contains('open') && !divBgOverlay.classList.contains('open')) {
         divAddBook.classList.add('open');
+        divBgOverlay.classList.add('open');
     }
 }
 
@@ -129,8 +131,9 @@ function addBook(event) {
 
     form.reset();
 
-    if(divAddBook.classList.contains('open')) {
+    if(divAddBook.classList.contains('open') && divBgOverlay.classList.contains('open')) {
         divAddBook.classList.remove('open');
+        divBgOverlay.classList.remove('open');
     }
 
     console.log(myLibrary)
